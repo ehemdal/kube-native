@@ -1,4 +1,5 @@
 FROM maven:3.6.3-jdk-8 AS appserver
+MAINTAINER erik.hemdal@gmail.com
 WORKDIR /usr/src/demo
 COPY pom.xml .
 RUN mvn -B -f pom.xml -s /usr/share/maven/ref/settings-docker.xml dependency:resolve
